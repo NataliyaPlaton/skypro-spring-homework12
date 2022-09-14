@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SkyproSpringHomework12Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SkyproSpringHomework12Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SkyproSpringHomework12Application.class, args);
+    }
 
 }
