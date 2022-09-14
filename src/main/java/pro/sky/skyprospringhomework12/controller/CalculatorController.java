@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pro.sky.skyprospringhomework12.exception.DivisionByZeroException;
 import pro.sky.skyprospringhomework12.service.CalculatorService;
 
 import java.util.Objects;
@@ -58,9 +59,7 @@ public class CalculatorController {
         if (Objects.isNull(num1) || Objects.isNull(num2)) {
             return "Передайте оба числа!";
         }
-        if (Double.compare(num2.doubleValue(), 0) == 0) {
-            return "На 0 делить нельзя!";
-        }
+
         return buildResult(num1, num2, calculatorService.divide(num1, num2), "/");
     }
 
